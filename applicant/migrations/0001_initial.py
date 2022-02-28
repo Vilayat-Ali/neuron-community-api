@@ -12,15 +12,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='member',
+            name='applicant',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.CharField(default='https://bootdey.com/img/Content/avatar/avatar1.png', max_length=100)),
                 ('full_name', models.CharField(max_length=100)),
-                ('role', models.CharField(max_length=100)),
-                ('github', models.CharField(blank=True, max_length=100)),
-                ('linkedin', models.CharField(blank=True, max_length=100)),
-                ('twitter', models.CharField(blank=True, max_length=100)),
+                ('email', models.EmailField(max_length=100, unique=True)),
+                ('phone', models.CharField(max_length=15)),
+                ('description', models.TextField(blank=True, max_length=400, null=True)),
             ],
         ),
     ]

@@ -30,6 +30,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'member.apps.MemberConfig',
+    'applicant.apps.ApplicantConfig',
+    'news.apps.NewsConfig',
+    'project.apps.ProjectConfig',
+    'newsletter.apps.NewsletterConfig',
 ]
 
 MIDDLEWARE = [
@@ -108,6 +112,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+DATE_INPUT_FORMATS = ['%d/%m/%Y'] 
 
 
 # Static files (CSS, JavaScript, Images)
